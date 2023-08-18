@@ -1,0 +1,7 @@
+<main>
+  <app-formulario [jugadores]="jugadores" [(seleccionado)]="indiceSeleccionado" (agregado)="agregar($event)"></app-formulario>
+  <br>
+  <br>
+  <app-buscador (filtroOut)="filtrar($event)"></app-buscador>
+  <app-listado #listado [jugadores]="jugadoresFiltrado" (indiceEditar)="editar($event)" (indiceBorrar)="borrar($event)"></app-listado>
+</main>
